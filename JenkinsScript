@@ -9,7 +9,7 @@ pipeline {
                 script {
                     component = params.shellscript
                     echo "Selected component: ${component}"
-                    sh "/home/lehar/jenelk.sh ${component}"
+                    sh "/home/lehar/Jenkins_connect_git/jenelk.sh ${component}"
                 }
             }
         }
