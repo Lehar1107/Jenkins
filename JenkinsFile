@@ -5,8 +5,7 @@ pipeline {
         stage('Run Script') {
             steps {
                 script {
-                    
-                    sh "/home/lehar/jenkins/file.sh ${component}"
+                    sh "/home/lehar/jenkins/file.sh"
                 }
             }
         }
