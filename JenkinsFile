@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+   
+    stages {
+        stage('Run Script') {
+            steps {
+                script {
+                    
+                    sh "/home/lehar/jenkins/file.sh ${component}"
+                }
+            }
+        }
+    }
+}
