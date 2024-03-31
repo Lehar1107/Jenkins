@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    parameters {
+        choice(name: 'shellscript', choices: ['elasticsearch', 'kibana'], description: 'Select the component for the script')
+    }
+    stages {
+        stage('Run Script') {
+            steps {
+                script {
+                    component = params.shellscript
+                    echo "Selected component: ${component}"
+                    sh "/home/lehar/jenkins/elk.sh ${component}"
+                }
+            }
+        }
+    }
+}
